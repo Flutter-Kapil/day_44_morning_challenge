@@ -25,7 +25,8 @@ int waterCollected(List<int> pipe) {
           if(pipe[j]>=k){
 //            print('i:$i, j:$j, k:$k');
           int temp = j-i-1;
-            totalWater.add(temp);
+            temp>=0?totalWater.add(temp):null;
+            break;
           }
 
         }
@@ -38,8 +39,8 @@ int waterCollected(List<int> pipe) {
 }
 
 main() {
-//  print(waterCollected([1,0,0,1]));
+  print(waterCollected([1,0,0,1]));
   print(waterCollected([2,1,0,3]));
-//  print(waterCollected([5,0,0,2]));
-//  print(waterCollected([1,2,3,4]));
+  print(waterCollected([5,0,0,2]));
+  print(waterCollected([1,2,3,4]));
 }
