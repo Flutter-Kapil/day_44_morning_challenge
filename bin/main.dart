@@ -13,6 +13,9 @@ import 'dart:math';
 
 int waterCollected(List<int> pipe) {
   List<int> totalWater = [];
+  if(pipe.isEmpty){
+    return 0;
+  }
   int longestPipe = pipe.reduce(max);
 //  print('longestPipe:$longestPipe');
   for(int k =longestPipe;k>0;k--){
@@ -43,4 +46,5 @@ main() {
   print(waterCollected([2,1,0,3]));
   print(waterCollected([5,0,0,2]));
   print(waterCollected([1,2,3,4]));
+  print(waterCollected([2]));
 }
